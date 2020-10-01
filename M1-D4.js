@@ -65,40 +65,96 @@ Write a function "strivify" which accepts a string S. Add to S "Strive" in front
 */
 
 let strivify = function(S) {
-    let S = [''];
+    a = 'Strive ' + S;
+
+    if (S.slice(0,6) == 'Strive') {
+        return S;
+    }
+    else {
+        return a;
+    }
 }
 
-console.log(strivify());
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
 HINT: Module Operator
 */
 
-/* WRITE YOUR CODE HERE */
+let check3and7 = function(x) {
+    if (x > 0){
+
+        if ((x % 3 == 0) && (x % 7 == 0)) {
+            return `${x} is a multiple of 3 and 7`
+        } else if (x % 3 == 0) {
+            return `${x} is a multiple of 3`
+        } else if (x % 7 == 0) {
+            return `${x} is a multiple of 7`
+        } else {
+            return `${x} is not a multiple of 3 or 7`
+        }
+
+    }
+    else {
+        return 'The give number is not positive';
+    }
+}
 
 /* EXERCISE 7
 Write a function "reverseString" to reverse programmatically a given string (es.: Strive => evirtS).
 */
 
-/* WRITE YOUR CODE HERE */
+let reverseString = function(x) {
+    
+    let nStr = "";
+    
+    for (var i = x.length - 1; i >= 0; i--) {
+        nStr += x[i];
+    }
+
+    return nStr;
+
+}
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
 
-/* WRITE YOUR CODE HERE */
+// let upperFirst = function(x) {
+
+//     let arr = x.slice(' ');
+
+//     for (i = 0; i < x.length; i++) {
+//         let arr1 += arr
+//     }
+
+
+// }
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 
-/* WRITE YOUR CODE HERE */
+let cutString = function(x) {
+    
+    nStr = x.slice(1,x.length-1);
+
+    return nStr;
+}
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10
 */
 
-/* WRITE YOUR CODE HERE */
+let giveMeRandom = function(n) {
+
+    arr = [];
+
+    for (i = 1; i <=n; i++) {
+        arr.push(Math.floor((Math.random() * 10) + 1));
+    }
+
+    return arr;
+}
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit with your tutor.
