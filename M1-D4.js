@@ -119,16 +119,17 @@ let reverseString = function(x) {
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as parameter
 */
 
-// let upperFirst = function(x) {
+let upperFirst = function(x) {
+    
+    let splitStr = x.toLowerCase().split(' ');
 
-//     let arr = x.slice(' ');
+    for (i = 0; i < splitStr.length; i++) {
 
-//     for (i = 0; i < x.length; i++) {
-//         let arr1 += arr
-//     }
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
 
-
-// }
+    return splitStr.join(' ');
+}
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
