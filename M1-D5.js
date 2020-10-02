@@ -98,20 +98,39 @@ function DeleteOne(a,b) {
   }
 }
 
-console.log(DeleteOne('Just a random string',false));
 /* Ex.5
    Write the function OnlyLetters that receives a string, removes all the numbers and returns it.
    Ex.: OnlyLetters("I love 123 whatever")  => returns "I love whatever"
 */
+function OnlyLetters(a) {
+  let arr = a.split('');
+
+  for (i = arr.length - 1; i >= 0; i--) {
+      if (isNaN(arr[i]) == false) {
+          arr.splice(i,1);
+      }
+      continue;
+  }
+  return arr.join(' ');
+}
 
 /* Ex.6 
    Write the function IsThisAnEmail that receives a string and returns true if the string is a valid email.
 */
 
+function IsThisAnEmail(a) {
+
+
+
+}
+
 /* Ex.7
    Write the function WhatDayIsIt that should return the day of the week
 */
 
+function WhatDayIsIt() {
+
+}
 /* Ex.8
     Write the function RollTheDices that receives a numeric input and returns an object that contains both the sum of the value of the dices and the dices itself
     This function should use the Dice function defined in Ex1
@@ -120,6 +139,21 @@ console.log(DeleteOne('Just a random string',false));
         values: [ 3, 3, 4]
     }
 */
+function RollTheDices(x){
+  let values = [];
+  let sum=0;
+
+  for (i=1; i<=x; i++) {
+    values.push(Dice())
+  }
+
+  for (j=0; j < values.length -1; j++) {
+    sum += values[j];
+  }
+  
+  return `${values} and ${sum}`;
+  
+}
 
 /* Ex.9
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
