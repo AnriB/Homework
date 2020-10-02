@@ -129,8 +129,12 @@ function IsThisAnEmail(a) {
 */
 
 function WhatDayIsIt() {
-
+  let a = Date.now();
+  let b = a.getDate();
+  return b;
 }
+
+
 /* Ex.8
     Write the function RollTheDices that receives a numeric input and returns an object that contains both the sum of the value of the dices and the dices itself
     This function should use the Dice function defined in Ex1
@@ -159,9 +163,30 @@ function RollTheDices(x){
    Write the function HowManyDays that receives a Date and return the number of days that has passed since that day.
 */
 
+function HowManyDays(x) {
+
+  let a = Date.now();
+  let b = Date(x);
+  let diffInTime = a - b;
+  let diffInDays = Math.round(diffInTime / (1000 * 3600 * 24)); 
+  return diffInDays;
+}
+
 /* Ex.10
    Write the function IsTodayMyBDay that returns true if it's your birthday, false otherwise
 */
+function IsTodayMyBDay() {
+  bday = [25,4];
+  curr = Date.now();
+  
+  let a = [curr.getDate , curr.getMonth];
+  
+  if (a == bday) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of the file
@@ -169,30 +194,84 @@ function RollTheDices(x){
 /* Ex.11
    Write the function DeleteProp that receives an object and a string, and returns the object after deleting the property with that given name
 */
+function DeleteProp(obj,str) {
+  let c = {};
+  c = Object.assign(c,obj);
+  delete c.str;
+  return c;
+}
+
+let obj = {
+  emri : 'anri',
+  mbiemri : 'bardhi'
+}
 
 /* Ex.12 
     Write the function OlderMovie that finds the older movie in the array
 */
+function OlderMovie() {
+  let arr=[];
+  for (i=0; i<movies.length; i++){
+      arr.push(parseInt(movies[i].Year));
+  }
+  return Math.min(...arr);
+
+}
 
 /* Ex.13
     Write the function CountMovies that returns the number of movies into the array
 */
+function CountMovies() {
+  return movies.length;
+}
 
 /* Ex.14
     Write the function OnlyTitles that creates an array with only the titles of the movies
 */
+function OnlyTitles() {
+  let arr=[];
+  for (i=0; i<movies.length; i++){
+      arr.push(movies[i].Title);
+  }
+  return arr;
+}
+
 
 /* Ex.15
    Write the function OnlyThisMillennium that returns only the movies produced in this millennium
 */
+function OnlyThisMillennium() {
+
+  let movie = [];
+
+  for (i=0; i<movies.length; i++) {
+      if (parseInt(movies[i].Year) > 2000) {
+          movie.push(movies[i].Title);
+      } 
+      else{
+          continue;
+      }
+  }
+  return movie.join(' ; ');
+}
 
 /* Ex.16 
     Write the function GetMovieById that receives an ID and returns the movie with the given ID
 */
+function GetMovieById(a) {
+
+  for (i=0; i<movies.length; i++) {
+      if (movies[i].imdbID == a){
+          return movies[i].Title;
+      } else {
+          continue;
+      }
+  }
+}
 
 /* Ex.17
     Write the function SumYears that returns the sum of the years the movie has been produced
-*/
+
 
 /* Ex.18
     Write the function SearchMovie that receives a string and returns all the movies with that string in the title
