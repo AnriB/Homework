@@ -42,7 +42,7 @@
               color: red;
           }
 
-          
+
 
       </style>
 
@@ -79,7 +79,7 @@
       </tr>
 
       <tr>
-        <td style="text-align: center;"><a href="https://www.amazon.com/Huawei-Display-Factory-Unlocked-MAR-LX3A/dp/B07PXSNRYY/ref=sr_1_1?dchild=1&keywords=huawei&qid=1601956723&sr=8-1">Huawei</a>></td>
+        <td style="text-align: center;"><a href="https://www.amazon.com/Huawei-Display-Factory-Unlocked-MAR-LX3A/dp/B07PXSNRYY/ref=sr_1_1?dchild=1&keywords=huawei&qid=1601956723&sr=8-1">Huawei</a></td>
         <td style="text-align: center;"><img src="images/huawei-p30.primaryproductimage.code-MDAwMDAwMDAwMDAwMDE5NzYw.format-hardware-configurator-xxl.png" style="width:200px;height:200px;"></td>
         <td style="text-align: center;">Model ProLite</td>
         <td style="text-align: center;"><p align='left' style="width: 500px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></td>
@@ -104,8 +104,9 @@
     </table>
 
 
+    <button onclick="changePContent()">Press to change the paragraph</button>
 
-    <div id='googleMap' style="width: 250px;height: 400px;"></div>
+    <!-- <div id='googleMap' style="width: 250px;height: 400px;"></div> -->
     <!-- <script>
 
       function myMap() {
@@ -119,6 +120,24 @@
     </script> -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCz5JMrHh869CcOeAgwMDFn3iWY0oUS0dQ&callback=myMap"></script> -->
 
+    <h2 id="listTitle">Todo List</h2>
+          <ul id="firstList">
+              <li><p>1st</p></li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <ul id="secondList">
+              <li>1st</li>
+              <li>2nd</li>
+              <li>3rd</li>
+          </ul>
+          <div>
+              <p>This text is just for the exercise</p>
+          </div>
+    
+    <input type="text" name="input1" id="input1">
+    <input type="button" value="Submit" onclick="changeListTitle()">
+
     <script>
       window.onload = function() {
         alert("THE PAGE HAS LOADED!!")
@@ -127,7 +146,7 @@
         function changeTitle(newTitle) {
             let a = document.querySelector('h1');
             a.innerHTML = newTitle.toString();
-        };
+        }
 
 
         function addClassToTitle() {
@@ -140,6 +159,18 @@
             let removeClass = document.querySelector('h1');
             removeClass.className -= 'red-color';
         }
+
+        function changePContent() {
+            let a = document.querySelectorAll('div')[0]
+            a.innerHTML = "<p>This is the new paragrap !@!</p>";
+        }       
+
+        function changeListTitle(){
+            let content = document.getElementById("input1").value
+            document.getElementById("listTitle").innerHTML = content
+
+        }
+        
     </script>
 
 
