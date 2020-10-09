@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>50 Exercises!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            height: 100%;
+            vertical-align: middle;
+            text-align:center
+        }
+        h1{
+            position: relative;
+        }
+        #top,
+        #bottom {
+            position: fixed;
+            left: 0;
+            right: 0;
+            height: 50%;
+        }
+
+        #top {
+            top: 0;
+            background-color: orange;
+        }
+
+        #bottom {
+            bottom: 0;
+            background-color: green;
+        }
+        table {
+            width: 100%;
+            border: 3px solid black;
+            border-collapse: collapse;
+            border-radius: 10px;
+        }
+        th, td {
+            width: fit-content;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .text {
+            width: 650px;
+        }
+        #nested {
+            width: 600px;
+        }
+    </style>
+  </head>
+
+  <body>
+      
+
+      <div id="top">
+        <h1>50 Exercises!</h1>
+        <ol>
+          <li>Item1</li>
+          <li>Item2</li>
+          <li>Item3</li>
+        </ol>
+
+        <div id='nested'>
+            <p>Lorem ipsum dolor sit amet,  elit et interdum. Proin pulvinar in erat lobortis consectetur.<span><ol><li>row1</li><li>row2</li><li>row3</li></ol>Proin volutpat lobortis</span>Morbi mattis, est ut fermentum lobortis, metus dui commodo enim, vel eleifend justo diam ut lorem. Vivamus scelerisque lacus tempus libero venenatis efficitur</p>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <table id="table1">
+            <tr>
+                <th></th>
+                <th><a href="https://i.imgur.com/AD3MbBi.jpeg"><img src="https://i.imgur.com/AD3MbBi.jpeg" alt="Cat #1" width="50" height="50" /></a></th>
+                <th></th>
+                <th colspan="2"></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th><a href="https://i.imgur.com/mtbl1cr.jpg"><img src="https://i.imgur.com/mtbl1cr.jpg" alt="Cat #2" width="50" height="50" /></a></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th><a href="https://i.imgur.com/Jvh1OQm.jpeg"><img src="https://i.imgur.com/Jvh1OQm.jpeg" alt="Cat #3" width="50" height="50" /></a></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <th></th>
+                <th><a href="https://i.imgur.com/P8BuuQv.jpg"><img src="https://i.imgur.com/P8BuuQv.jpg" alt="Elephant" width="50" height="50" /></a></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+
+        </table>
+        <footer>
+            <p>Author: Anri B<br>
+            <a href="mailto:test@anrib.com">test@anrib.com</a></p>
+          </footer> 
+      </div>
+  
+  </body>
+</html>
