@@ -19,7 +19,7 @@
             background-color: #f8f8f8;
             font-family: "Poppins", sans-serif;
             color: #1b1b1b;
-            max-width: 768px;
+            max-width: 800px;
             margin: 0 auto;
             font-size: 18px;
         }
@@ -30,18 +30,34 @@
             margin-bottom: 20px;
             border: 6px solid #1b1b1b;
             border-radius: 6px;
+        
+        }
 
+        #user-board {
+            background-color: pink;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 6px solid black;
+            border-radius: 6px;
         }
         .boardCell {
             display: inline-block;
-            width: 10%;
+            width: 12%;
             position: relative;
             text-align: center;
             border: 1px solid transparent;
         }
 
+        .userCell {
+            display: inline-block;
+            width: 12%;
+            position: relative;
+            text-align: center;
+            border: 1px solid transparent; 
+        }
+
         .selected {
-            border: 1px solid #00ff84;
+            border: 1px solid #1b1b1b;
             border-radius: 6px;
         }
     </style>
@@ -53,18 +69,17 @@
 
         <h1>Welcome to the BINGO CHALLENGE!</h1>
         <br />
-        <br />
-        <br />
 
         <div id="bingo-board">
-
-        </div>
-        <div id="user-board">
 
         </div>
 
         <div>
             <input type="button" value="RANDOMIZE!" onclick="checkBoard()" />
+        </div>
+
+        <div id="user-board">
+
         </div>
 
         <script>
@@ -79,12 +94,29 @@
 
             }
 
+            function userBoard(){
+                let board = document.querySelector("#user-board")
+
+                for (let i = 1; i<25; i++) {
+                    let a = document.createElement('h2')
+                    a.classList="userCell"
+                    board.appendChild(a)
+                }
+            }
+
             window.onload = function() {
                 createBoard()
-
+                userBoard()
                 let a = document.getElementById('bingo-board').children
+                let b = document.getElementById('user-board').children
+                
                 for (let i = 0; i < 76; i++){
                     a[i].innerHTML = i+1;
+                }
+
+            
+                for (let j = 0; i < 24; j++){
+                    b[j].innerHTML = j+1;
                 }
                 
             } 
@@ -94,12 +126,12 @@
             }
 
             function checkBoard(){
-                let a = randomizeNumber()
-                let b = document.getElementById('bingo-board').children
+                let a = document.getElementById('bingo-board').children
+                let b = randomizeNumber()
                 
                 for (let i=0; i<77; i++) {
-                    if (a == b[i].innerHTML) {
-                        b[i].classList.add('selected')
+                    if (a[i].innerHTML == b) {
+                        a[i].classList.add('selected')
                     } else continue;
                 }
             }
