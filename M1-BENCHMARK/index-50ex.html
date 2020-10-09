@@ -108,8 +108,35 @@
       </div>
       
       <script>
-          console.log(document.getElementById('container'))
-          console.log(document.querySelectorAll('th'))
+
+            let x = "John";
+            let y = "Doe";
+            console.log(x + " <> " + y)
+
+            let obj = {
+                name: "Anri",
+                surname: "Bardhi",
+                email: "anribardhi25@gmail.com"
+            }
+            delete obj.email
+
+            let z = 'test string'
+            let arr = [];
+            for (let i=0; i<10; i++){
+                arr.push(z);
+            }
+            
+            for (let i=0; i<arr.length; i++){
+                console.log(arr[i])
+            }
+
+            let arrandom = [];
+
+            for let (i=0; i<100; i++){
+                arrandom.push(Math.floor(Math.random() * 100) + 1)
+            }
+            console.log(document.getElementById('container'))
+            console.log(document.querySelectorAll('th'))
 
             function changeHeading() {
                 let a = document.querySelector('h1')
@@ -117,10 +144,13 @@
             }
 
             function addTableRow() {
-                let a = document.getElementById('table1').rows
-                let b = document.createElement('tr')
-                
-                a.appendChild(b)
+                let a = document.getElementById('table1')
+                let b = a.length
+                let row = a.insertRow(b-1)
+                let cell1 = row.insertCell(0)
+                let cell2 = row.insertCell(1)
+                cell1.innerHTML = 'Test1'
+                cell2.innerHTML = 'Test2'
             }
 
 
