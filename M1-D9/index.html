@@ -9,6 +9,101 @@
         - Create a USER BOARD with random 24 numbers that highlights as the main board does
         - Let the user choose HOW MANY user boards he's willing to play with and create them.
     -->
-  <head></head>
-  <body></body>
+  <head>
+    <title>Bingo Challenge</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        body {
+            background-color: #f8f8f8;
+            font-family: "Poppins", sans-serif;
+            color: #1b1b1b;
+            max-width: 768px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        #bingo-board {
+            background-color: red;
+            width: 100%;
+            margin-bottom: 20px;
+            border: 6px solid #1b1b1b;
+            border-radius: 6px;
+
+        }
+        .boardCell {
+            display: inline-block;
+            width: 10%;
+            position: relative;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+
+        .selected {
+            border: 1px solid #00ff84;
+            border-radius: 6px;
+        }
+    </style>
+  
+</head>
+
+
+    <body>
+
+        <h1>Welcome to the BINGO CHALLENGE!</h1>
+        <br />
+        <br />
+        <br />
+
+        <div id="bingo-board">
+
+        </div>
+        <div id="user-board">
+
+        </div>
+
+        <div>
+            <input type="button" value="RANDOMIZE!" onclick="checkBoard()" />
+        </div>
+
+        <script>
+            function createBoard(){
+                let board = document.querySelector("#bingo-board")
+
+                for (let i = 1; i<77; i++) {
+                    let a = document.createElement('h2')
+                    a.classList="boardCell"
+                    board.appendChild(a)
+                }
+
+            }
+
+            window.onload = function() {
+                createBoard()
+
+                let a = document.getElementById('bingo-board').children
+                for (let i = 0; i < 76; i++){
+                    a[i].innerHTML = i+1;
+                }
+                
+            } 
+
+            function randomizeNumber() {
+                return Math.floor(Math.random() * 76) + 1; 
+            }
+
+            function checkBoard(){
+                let a = randomizeNumber()
+                let b = document.getElementById('bingo-board').children
+                
+                for (let i=0; i<77; i++) {
+                    if (a == b[i].innerHTML) {
+                        b[i].classList.add('selected')
+                    } else continue;
+                }
+            }
+        </script>
+    </body>
+
 </html>
