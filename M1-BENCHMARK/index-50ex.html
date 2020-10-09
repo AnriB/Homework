@@ -45,7 +45,7 @@
         .text {
             width: 650px;
         }
-        #nested {
+        #container {
             width: 600px;
         }
     </style>
@@ -62,7 +62,7 @@
           <li>Item3</li>
         </ol>
 
-        <div id='nested'>
+        <div id='container'>
             <p>Lorem ipsum dolor sit amet,  elit et interdum. Proin pulvinar in erat lobortis consectetur.<span><ol><li>row1</li><li>row2</li><li>row3</li></ol>Proin volutpat lobortis</span>Morbi mattis, est ut fermentum lobortis, metus dui commodo enim, vel eleifend justo diam ut lorem. Vivamus scelerisque lacus tempus libero venenatis efficitur</p>
         </div>
       </div>
@@ -106,6 +106,24 @@
             <a href="mailto:test@anrib.com">test@anrib.com</a></p>
           </footer> 
       </div>
-  
+      
+      <script>
+          console.log(document.getElementById('container'))
+          console.log(document.querySelectorAll('th'))
+
+            function changeHeading() {
+                let a = document.querySelector('h1')
+                a.innerHTML = "Didn't solve them all :("
+            }
+
+            function addTableRow() {
+                let a = document.getElementById('table1').rows
+                let b = document.createElement('tr')
+                
+                a.appendChild(b)
+            }
+
+
+      </script>
   </body>
 </html>
