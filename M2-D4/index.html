@@ -29,10 +29,8 @@
   </head>
   <body>
     <div class="container">
-      <div class="col" id="initial-list">
-        <ul class="list-group">
-          <li class="list-group-item">Placeholder</li>
-        </ul>
+      <div class="col">
+        <ul class="list-group" id="initial-list"></ul>
       </div>
 
       <div class="col" id="submit-btn">
@@ -50,7 +48,7 @@
 
             <div class="col-auto my-1">
               <button
-                type="submit"
+                type="button"
                 class="btn btn-primary"
                 onclick="addNameToList()"
               >
@@ -64,7 +62,12 @@
 
     <script>
       function addNameToList() {
-        console.log("test");
+        let a = document.getElementById("inlineFormInputName").value;
+        let b = document.getElementById("initial-list");
+        let li = document.createElement("li");
+        li.classList.add("list-group-item");
+        li.innerHTML = a;
+        b.appendChild(li);
       }
     </script>
     <script
