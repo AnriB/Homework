@@ -33,7 +33,12 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
@@ -55,22 +60,28 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+            <a class="nav-link text-dark" href="#top-albums"
+              >Top-Albums <span class="sr-only">(current)</span></a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link text-dark" href="#best-track">Best Track</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link text-dark" href="#hall-shame">Hall of Shame</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#fav-artist">Fav Artist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#cover-list">Cover Show</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid my-3">
-      <div class="row">
+    <div class="container-fluid my-3" id="top-albums">
+      <div class="row top-albums">
         <div
           class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
         >
@@ -219,7 +230,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
     </div>
 
     <div class="jumbotron jumbotron-fluid d-none d-lg-block snoopiebg">
-      <div class="container">
+      <div class="container" id="best-track">
         <h3 class="display-4">Doggiest Track evah</h3>
 
         <div class="row">
@@ -247,7 +258,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="hall-shame">
       <h2 class="mb-2">Hall Of Shame</h2>
 
       <ul class="list-unstyled">
@@ -296,73 +307,285 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
       </ul>
     </div>
 
-    <div class="container-fluid snoopiebg">
-      <div class="row"><h2 class="my-4">Exceptional performances</h2></div>
-      <div class="row">
-        <div class="col-8">
-          <ul class="list-unstyled">
-            <li class="media">
-              <img
-                src="assets/img/snoopie4.jpg"
-                class="mr-3 img-fluid img-thumbnail rounded"
-                alt="..."
-              />
-              <div class="media-body">
-                <h4 class="mt-0 mb-1">Song number 1</h4>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                nisi vulputate fringilla. Donec lacinia congue felis in
-                faucibus.
-              </div>
-            </li>
-            <li class="media my-4">
-              <img
-                src="assets/img/snoopie5.jpg"
-                class="mr-3 img-fluid img-thumbnail rounded"
-                alt="..."
-              />
-              <div class="media-body">
-                <h4 class="mt-0 mb-1">Song number 2</h4>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                nisi vulputate fringilla. Donec lacinia congue felis in
-                faucibus.
-              </div>
-            </li>
-            <li class="media">
-              <img
-                src="assets/img/snoopie6.jpg"
-                class="mr-3 img-fluid img-thumbnail rounded"
-                alt="..."
-              />
-              <div class="media-body">
-                <h4 class="mt-0 mb-1">Song number 3</h4>
-                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                nisi vulputate fringilla. Donec lacinia congue felis in
-                faucibus.
-              </div>
-            </li>
-          </ul>
+    <div class="jumbotron jumbotron-fluid d-none d-lg-block snoopiebg">
+      <div class="container" id="fav-artist">
+        <h3 class="display-4">Favourite Artist</h3>
+
+        <div class="row">
+          <div class="col-7">
+            <img
+              src="assets/img/snoopie7.jpg"
+              alt=""
+              class="img-fluid img-thumbnail rounded"
+            />
+          </div>
+          <div class="col-5">
+            <h4>Snoop Dogg</h4>
+            <p class="lead">
+              Snoop Dogg, byname of Cordozar Calvin Broadus, Jr., also called
+              Snoop Doggy Dogg and Snoop Lion, (born October 20, 1971, Long
+              Beach, California, U.S.), American rapper and songwriter who
+              became one of the best-known figures in gangsta rap in the 1990s
+              and was for many the epitome of West Coast hip-hop culture.
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- EXERCISE 6
-            Do you have any musician / band you admire or you are fan of?
-            This section is dedicated to him / her / them!
-            Feel free to experiment in this part of the page.
-        -->
+    <div class="container-fluid" id="cover-list">
+      <div class="row mb-3">
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text s">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center my-2"
+        >
+          <div class="card" style="width: 18rem">
+            <img
+              src="assets/img/snoopie8.jpg"
+              class="card-img-top img-fluid img-thumbnail"
+              alt="..."
+            />
+            <div class="card-body snoopiebg">
+              <h5 class="card-title">Cover 1</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- EXERCISE 7
-            Just covers!
-            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
-            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
-        -->
+    <footer class="page-footer pt-4 snoopiebg">
+        <div class="container text-center text-md-left">
+          <div class="row">
+            <div class="col-md-4 col-lg-3 mr-auto mb-1">
+            <div class="font-weight-bold mb-1 link" id="icon">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            <div>
+                <a class="link" href="https://www.netflix.com/browse/subtitles">
+                    <span class="text-dark">Audio and Subtitles</span>
+                </a>
+            </div>
+            <div>
+                <a class="link" href="https://www.netflix.com/browse/subtitles">
+                    <span class="text-dark">Media Center</span>
+                </a>
+            </div>
+            <div>
+                <a class="link" href="https://www.netflix.com/browse/subtitles">
+                    <span class="text-dark">Privacy</span>
+                </a>
+            </div>
+            <div>
+                <a class="link" href="https://www.netflix.com/browse/subtitles">
+                    <span class="text-dark">Contact Us</span>
+                </a>
+            </div>
+        
+            <div class="button mt-3 mb-3">
+                <span class="copyright">© 1971-2020 Snoopie, Inc.</span>   
+            </div>
+        </div>
+    
+            <div class="col-md-4 col-lg-3 mr-auto mt-4 mb-1">
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark"></span>
+                    </a>
+                </div>
+                <div id="links">
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Audio Description</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Investor Relations</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Legal Notices</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mr-auto mt-4 mb-1">
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark"></span>
+                    </a>
+                </div>
+                <div id="links">
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Help Center</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Jobs</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Cookie Prefrences</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mr-auto mt-4 mb-1">
+                <div>
+                    <a class="link mt-5" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark"></span>
+                    </a>
+                </div>
+                <div id="links">
+                    <a class="link" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Gift Cards</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="link" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Terms of Use</span>
+                    </a>
+                </div>
+                <div>
+                    <a class="link" href="https://www.netflix.com/browse/subtitles">
+                        <span class="text-dark">Corporate Information</span>
+                    </a>
+                </div>
+            </div>
 
+    </footer>
     <!-- EXERCISE 8
             Implement a footer with some information / social links
         -->

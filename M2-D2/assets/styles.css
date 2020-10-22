@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .snoopiebg {
   background-color: #93cb56;
 }
